@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find by spec — every model, every supplier, one table — Omnii Robotics</title>
+<meta name="description" content="Every actuator we carry on one table: rated torque, peak torque, outer diameter, weight, gear ratio and the condition each rated figure was measured under.">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body data-page="select">
+
+<div id="site-header"></div>
+
+<section class="page-head compact">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Store</a><span>/</span>Find by spec</div>
+    <h1 data-head>Every model, every supplier, one table</h1>
+    <p class="lede" data-lede>Sort on any column. A blank is a figure we do not have from
+      the supplier — we would rather show the gap than fill it in.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="filters" data-filters></div>
+</div>
+
+<!-- Picking a technology shows who makes one before it shows which model.
+     The one-table view is a link away on the same screen, because comparing
+     across suppliers is the reason this catalogue exists. -->
+<div class="wrap"><div class="brand-grid" data-brands hidden></div></div>
+
+<div data-tablewrap>
+  <div class="wrap">
+    <div class="collection-bar">
+      <span class="count" data-count></span>
+      <span class="count range" data-known></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="compare-scroll">
+      <table class="finder-table" data-table></table>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <p class="muted" style="font-size:13px;max-width:760px">
+      <strong>On the "rated at" column.</strong> Rated torque is not a property of a
+      motor; it is a property of a motor at a bus voltage and a thermal limit. Where
+      a supplier states the condition we print it. Where the figure comes out of a
+      part code rather than a datasheet we say so, and sorting will not rank it
+      against a stated one.
+    </p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Dropbox and Windows leave these behind in every folder they touch.
+Thumbs.db
+desktop.ini
+.DS_Store
+*conflicted copy*
+~$*
+
+__pycache__/
+*.pyc
+
+# internal/ is NOT ignored, on purpose.
+#
+# It holds internal/costs.json and the supplier catalogues the generator reads,
+# so leaving it out would make this repository unable to rebuild itself - the
+# backup would be incomplete in the one way that matters.
+#
+# It carries dealer cost. That is safe here and nowhere else:
+#   - this repository is PRIVATE
+#   - internal/ is never deployed; the site is served from the root files only
+#   - no cost ever enters assets/js/data.js, which browsers download
+#
+# If this repository is ever made public, internal/ has to come out first,
+# and out of the history, not just the working tree.

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omnii Robotics — robotic actuators from several suppliers, compared</title>
+<meta name="description" content="Pick a robotic actuator on rated torque, outer diameter and gear ratio across several suppliers, and compare the candidates on one table.">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body data-page="home">
+
+<div id="site-header"></div>
+
+<!-- 1. The primary axis: what kind of actuator it is. Supplier-independent,
+        and it is the first real decision an engineer makes. -->
+<section class="section top">
+  <div class="wrap">
+    <div class="section-head">
+      <h1>Select actuators by type</h1>
+      <p class="lede">If you already know the technology, start here. If you do not,
+        the line under each one is the deciding question.</p>
+    </div>
+    <div class="type-grid" data-types></div>
+  </div>
+</section>
+
+<!-- 3. The secondary axis. Works the way the CubeMars site's joint pages work,
+        which is the part of that site worth carrying over. -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>By what you are building</h2>
+      <p class="lede">Same catalogue, entered from the machine instead of the part.</p>
+    </div>
+    <div class="app-grid" data-apps></div>
+  </div>
+</section>
+
+<!-- 4. Cross-supplier comparison. This is the only reason to come here rather
+        than go straight to a manufacturer, so it is a feature, not a utility. -->
+<section class="section band">
+  <div class="wrap">
+    <div class="compare-pitch">
+      <div>
+        <h2>Multiple suppliers, one table</h2>
+        <p class="lede">Put candidates side by side on rated torque, peak torque,
+          outer diameter, weight and ratio — and see the rows that differ
+          highlighted.</p>
+        <p>Rated torque is not a property of a motor. It is a property of a motor
+          at a bus voltage and a thermal limit, and suppliers do not publish it the
+          same way. Every figure here carries the condition it was measured under,
+          and we say so on the row rather than quietly ranking numbers that are not
+          comparable.</p>
+        <p style="margin-top:22px">
+          <a class="btn btn-accent" href="select.html">Compare every model</a>
+        </p>
+      </div>
+      <div class="compare-demo" data-compare-demo></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Why here. Not a supplier count — the count is not the point. -->
+<section class="section band">
+  <div class="wrap">
+    <div class="why-grid" data-why></div>
+  </div>
+</section>
+
+<!-- 5. The spec picker, last. It is useful, but it asks for numbers before
+        the reader has seen what is on offer, so it closes the page rather
+        than gating it. -->
+<section class="picker-hero tail">
+  <div class="wrap">
+    <h2>Know the numbers already?</h2>
+    <p class="lede">Give us the torque you need and the space you have. We will
+      show every actuator that fits, from every supplier we carry, on one table.</p>
+    <form class="picker" data-picker novalidate>
+      <div class="picker-field">
+        <label class="lbl" for="p-torque">Rated torque</label>
+        <select class="field" id="p-torque" name="torque">
+          <option value="">Any</option>
+          <option value="0,2">Under 2 N·m</option>
+          <option value="2,10">2 – 10 N·m</option>
+          <option value="10,30">10 – 30 N·m</option>
+          <option value="30,1e9">Over 30 N·m</option>
+        </select>
+      </div>
+      <div class="picker-field">
+        <label class="lbl" for="p-od">Fits a bore of</label>
+        <select class="field" id="p-od" name="od">
+          <option value="">Any</option>
+          <option value="0,50">Under Ф50</option>
+          <option value="0,60">Under Ф60</option>
+          <option value="0,80">Under Ф80</option>
+          <option value="0,100">Under Ф100</option>
+        </select>
+      </div>
+      <div class="picker-field">
+        <label class="lbl" for="p-type">Type</label>
+        <select class="field" id="p-type" name="type"><option value="">Any</option></select>
+      </div>
+      <button class="btn btn-accent" type="submit">Show me what fits</button>
+    </form>
+    <p class="picker-note" data-picker-note></p>
+    <div data-picker-results></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

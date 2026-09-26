@@ -1,0 +1,309 @@
+/* Home-page layout for Actuator Master.
+   site.css carries over from the Picasso site untouched; everything specific to
+   the multi-supplier layout lives here so the shared sheet stays shared. */
+
+/* ---- 1. the picker hero ------------------------------------------------ */
+/* The CubeMars site opens on product art because buyers arrive for the brand.
+   Here they arrive with a number, so the form is the hero and the art is gone. */
+.picker-hero {
+  background: linear-gradient(180deg, #f7f8f9 0%, #fff 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 74px 0 60px;
+}
+.picker-hero h1 { font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -.02em; margin-bottom: 14px; }
+.picker-hero .lede { max-width: 620px; margin-bottom: 32px; }
+
+.picker {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 14px; align-items: end;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.picker .btn { height: 44px; white-space: nowrap; }
+.picker-note { margin-top: 16px; color: var(--ink-2); font-size: 14px; min-height: 20px; }
+
+.hit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 8px; }
+.hit {
+  border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff;
+  padding: 14px; text-decoration: none; color: inherit; display: block;
+}
+.hit:hover { border-color: var(--ink-4); text-decoration: none; }
+.hit-art { aspect-ratio: 1.6; display: grid; place-items: center; margin-bottom: 8px; }
+.hit-art svg { width: 74%; height: auto; }
+.hit-name { font-weight: 600; font-size: 14.5px; }
+/* The supplier is a fact about the part, not a way to navigate to it. It never
+   appears in the nav or as a filter — see the note at the top of data.js. */
+.hit-sup { font-size: 11.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; }
+.hit-torque { font-size: 22px; font-weight: 600; margin-top: 8px; }
+.hit-dims { font-size: 12.5px; color: var(--ink-3); }
+.hit-price { font-size: 14px; margin-top: 8px; }
+
+/* ---- 2. by type -------------------------------------------------------- */
+/* Five across, so Direct drive lands on the first row with the geared types
+   rather than being pushed onto a second row where it reads as an also-ran.
+   Every card is the same shape and every line of a card starts at the same
+   height as the line beside it: the picture box has a fixed ratio, and the
+   name and the tease reserve their tallest wrapping so the description below
+   them never sits at a different level from one column to the next. */
+.type-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.type-card {
+  border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+  text-decoration: none; color: inherit; display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.type-card:hover { border-color: var(--ink-4); text-decoration: none; }
+.type-art {
+  aspect-ratio: 1.35; padding: 14px;
+  display: grid; place-items: center; overflow: hidden;
+}
+/* Height, not width, decides the size. These parts are all round, so equal
+   height is equal apparent size; letting width lead would make a tall
+   photograph shrink next to a wide one for no reason a reader can see. */
+.type-art img { height: 100%; width: auto; max-width: 100%; object-fit: contain; display: block; }
+.type-art svg { width: 66%; height: auto; }
+.type-body { padding: 15px 16px 18px; display: flex; flex-direction: column; flex: 1; }
+.type-body h3 {
+  font-size: 15.5px; line-height: 1.25; margin-bottom: 3px;
+  min-height: 2.5em; /* two lines: "Frameless motors" wraps, "Harmonic" does not */
+}
+.type-tease {
+  font-size: 12px; color: var(--accent); margin-bottom: 10px;
+  line-height: 1.3; min-height: 2.6em;
+}
+.type-body p { font-size: 13px; line-height: 1.5; color: var(--ink-2); flex: 1; }
+.type-count {
+  font-size: 12px; color: var(--ink-3); margin-top: 14px;
+  padding-top: 11px; border-top: 1px solid var(--line);
+}
+
+/* ---- 3. comparison ----------------------------------------------------- */
+.band { background: #f7f8f9; }
+.compare-pitch { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
+.compare-pitch p { color: var(--ink-2); font-size: 14.5px; }
+.demo-table {
+  width: 100%; border-collapse: collapse; background: #fff;
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  font-size: 13.5px;
+}
+.demo-table th, .demo-table td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+.demo-table thead th { background: #fff; font-size: 13.5px; vertical-align: top; }
+.demo-sup { display: block; font-weight: 400; font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; }
+.demo-table tbody th { font-weight: 400; color: var(--ink-3); width: 34%; }
+/* Highlighting only the rows that differ is the whole utility of a compare
+   table — identical rows are noise once you have three columns. */
+.demo-table tr.differs td { background: #fffdf2; font-weight: 600; }
+.demo-table tr:last-child td, .demo-table tr:last-child th { border-bottom: 0; }
+
+/* ---- 4. by application ------------------------------------------------- */
+.joint-hint { font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+
+/* ---- 5. why here ------------------------------------------------------- */
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.why-item h3 { font-size: 17px; margin-bottom: 8px; }
+.why-item p { color: var(--ink-2); font-size: 14.5px; }
+
+/* ---- responsive -------------------------------------------------------- */
+/* Five, four, three, two: the deciding sentence under each name needs width
+   more than the row needs to stay whole. Order matters — the narrowest rule
+   has to come last or a wider one overrides it on a phone. */
+@media (max-width: 1080px) {
+  .type-grid { grid-template-columns: repeat(4, 1fr); }
+  .hit-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 940px) { .type-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 860px) {
+  .picker { grid-template-columns: 1fr 1fr; }
+  .picker .btn { grid-column: 1 / -1; }
+  .compare-pitch { grid-template-columns: 1fr; gap: 32px; }
+  .why-grid { grid-template-columns: 1fr; gap: 26px; }
+}
+@media (max-width: 620px) {
+  .picker { grid-template-columns: 1fr; }
+  .type-grid, .hit-grid { grid-template-columns: 1fr 1fr; }
+  .type-body h3, .type-tease { min-height: 0; }
+  .picker-hero { padding: 44px 0 40px; }
+}
+
+/* ---- find by spec ------------------------------------------------------ */
+.finder-table th[data-sort] { cursor: pointer; user-select: none; white-space: nowrap; }
+.finder-table th.sorted { color: var(--accent); }
+/* A gap is a fact about the supplier's datasheet, not about the motor. It is
+   drawn as an absence, never as a zero. */
+.finder-table td.gap { color: var(--ink-4); }
+.finder-table td.soft { color: var(--ink-3); font-style: italic; }
+
+/* ---- photography ------------------------------------------------------- */
+/* Everything is drawn on a square plate with object-fit: contain, so parts of
+   very different proportions still line up on a shared baseline. */
+.hit-art img, .type-art img, .app-card .thumb img,
+.demo-shot img, .row-shot img {
+  width: 100%; height: 100%; object-fit: contain; display: block;
+}
+.type-art.has-photo { padding: 10px 14px 0; }
+.type-art.has-photo img { mix-blend-mode: multiply; }
+
+.demo-shot { width: 54px; height: 54px; margin-bottom: 8px; }
+.finder-table td.model { display: flex; align-items: center; gap: 10px; }
+.row-shot { width: 34px; height: 34px; flex: none; }
+
+
+/* The type grid is the first real decision on the page, so the hero gives up
+   height to bring it closer to the fold: tighter photo strip, less padding
+   below the picker and above the section that follows. */
+.picker-hero { padding-bottom: 34px; }
+.picker-hero + .section { padding-top: 46px; }
+
+/* Hollow shaft and rotor orientation are hard selection constraints, so they
+   ride on the card rather than hiding on the product page. */
+.attrs { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px; }
+.attr {
+  font-size: 10.5px; letter-spacing: .03em; text-transform: uppercase;
+  color: var(--ink-3); border: 1px solid var(--line); border-radius: 3px; padding: 2px 6px;
+}
+.finder-table td.quote { white-space: nowrap; }
+
+/* ---- one product ------------------------------------------------------- */
+.pdp2 { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; padding: 22px 0 20px; }
+.pdp2-main {
+  aspect-ratio: 1; background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); display: grid; place-items: center; padding: 26px;
+  position: relative; overflow: hidden;
+}
+/* The arrows sit on the picture, where the pointer already is. They stay faint
+   until the picture is hovered so they do not compete with the product, and
+   they are always visible on touch, where there is no hover to reveal them. */
+.pdp2-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+  border: 1px solid var(--line); background: rgba(255, 255, 255, .92);
+  color: var(--ink-1); font-size: 24px; line-height: 1; padding: 0 0 3px;
+  display: grid; place-items: center; opacity: 0; transition: opacity .15s;
+}
+.pdp2-main:hover .pdp2-arrow, .pdp2-arrow:focus-visible { opacity: 1; }
+.pdp2-arrow.prev { left: 12px; }
+.pdp2-arrow.next { right: 12px; }
+.pdp2-arrow:hover { background: #fff; border-color: var(--ink-4); }
+.pdp2-dots {
+  position: absolute; bottom: 12px; left: 0; right: 0;
+  display: flex; justify-content: center; gap: 6px;
+}
+.pdp2-dots i {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--line);
+}
+.pdp2-dots i.on { background: var(--ink-3); }
+@media (hover: none) { .pdp2-arrow { opacity: 1; } }
+.pdp2-main img { width: 100%; height: 100%; object-fit: contain; }
+.pdp2-thumbs { display: flex; gap: 10px; margin-top: 12px; }
+.pdp2-thumb {
+  width: 74px; height: 74px; padding: 6px; background: #fff; cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+}
+.pdp2-thumb.on { border-color: var(--accent); }
+.pdp2-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.pdp2-sup { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.pdp2-body h1 { font-size: clamp(26px, 3vw, 36px); letter-spacing: -.02em; margin: 6px 0 12px; }
+.pdp2-price { font-size: 26px; font-weight: 600; margin: 18px 0 4px; }
+.pdp2-h2 { font-size: 20px; margin-bottom: 16px; }
+
+/* Four tiles, and a dash where the supplier published nothing. */
+.spec-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 26px;
+  background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.spec-tile { background: #fff; padding: 16px 18px; font-size: 12.5px; color: var(--ink-3); }
+.spec-tile b { display: block; font-size: 26px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.spec-tile b span { font-size: 13px; font-weight: 400; color: var(--ink-3); margin-left: 4px; }
+
+.spec-table2 { width: 100%; border-collapse: collapse; max-width: 640px; font-size: 14px; }
+.spec-table2 th, .spec-table2 td { padding: 10px 0; border-bottom: 1px solid var(--line); text-align: left; }
+.spec-table2 th { font-weight: 400; color: var(--ink-3); width: 46%; }
+.spec-table2 td.soft { color: var(--ink-3); font-style: italic; }
+
+@media (max-width: 860px) { .pdp2 { grid-template-columns: 1fr; gap: 28px; } }
+
+/* The category grid now opens the page, so it carries the h1 and the top
+   spacing the hero used to. */
+.section.top { padding-top: 54px; }
+.section.top .section-head h1 {
+  font-size: clamp(30px, 4vw, 44px); letter-spacing: -.02em; margin-bottom: 12px;
+}
+/* The picker closes the page instead of gating it: same control, no hero weight. */
+.picker-hero.tail {
+  border-top: 1px solid var(--line); border-bottom: 0;
+  background: #f7f8f9; padding: 60px 0 66px; margin-top: 20px;
+}
+.picker-hero.tail h2 { font-size: 26px; margin-bottom: 10px; }
+
+/* Two versions of one part: a switch on the page, one card in the listing. */
+.variant-pick { margin-top: 20px; }
+.variant-pick > span {
+  display: block; font-size: 11.5px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px;
+}
+.vpick {
+  display: inline-flex; gap: 10px; align-items: baseline; margin: 0 8px 8px 0;
+  padding: 9px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: #fff; color: var(--ink-2); text-decoration: none; font-size: 13.5px;
+}
+.vpick:hover { border-color: var(--ink-4); text-decoration: none; }
+.vpick.on { border-color: var(--accent); color: var(--ink); }
+.vpick b { font-weight: 600; color: var(--ink); }
+
+/* ---- ask an engineer --------------------------------------------------- */
+.ask-layout { display: grid; grid-template-columns: 1.25fr 1fr; gap: 60px; padding: 6px 0 80px; }
+.ask-side h3 { font-size: 16px; margin-bottom: 10px; }
+.ask-side p { font-size: 14px; }
+/* The part carries over from the product page, so nobody retypes a model
+   number they were just looking at. */
+.asked-about {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 26px;
+  padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+}
+.asked-shot { width: 56px; height: 56px; flex: none; }
+.asked-shot img, .asked-shot svg { width: 100%; height: 100%; object-fit: contain; }
+.asked-about span { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.asked-about b { display: block; font-size: 16px; }
+.asked-about em { font-style: normal; font-size: 12.5px; color: var(--ink-3); }
+.asked-about .link-btn { margin-left: auto; }
+@media (max-width: 860px) { .ask-layout { grid-template-columns: 1fr; gap: 34px; } }
+
+/* ---- brand step on a type page ---------------------------------------- */
+/* Bigger than a type card on purpose: this is the step where a photograph
+   does the work, because the visitor is choosing between makers they may
+   already know rather than reading a spec. */
+/* Four makers, one row: the grid is a comparison, and a maker wrapped
+   onto a second row reads as an afterthought. */
+.brand-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.brand-card {
+  border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+  text-decoration: none; color: inherit; display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.brand-card:hover { border-color: var(--ink-4); text-decoration: none; }
+.brand-art {
+  aspect-ratio: 1.35; padding: 18px;
+  display: grid; place-items: center; overflow: hidden;
+}
+.brand-art img { height: 100%; width: auto; max-width: 100%; object-fit: contain; display: block; }
+.brand-art svg { width: 62%; height: auto; }
+.brand-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+.brand-body h3 { font-size: 20px; margin-bottom: 2px; }
+.brand-count { font-size: 12.5px; color: var(--ink-3); }
+.brand-span {
+  display: grid; grid-template-columns: auto 1fr; gap: 2px 14px;
+  margin: 14px 0 0; font-size: 13px; flex: 1; align-content: start;
+}
+.brand-span dt { color: var(--ink-3); }
+.brand-span dd { margin: 0; }
+.brand-from {
+  font-size: 14px; font-weight: 600; margin-top: 16px;
+  padding-top: 12px; border-top: 1px solid var(--line);
+}
+@media (max-width: 1080px) { .brand-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px)  { .brand-body h3 { font-size: 17px; } }
+@media (max-width: 620px)  { .brand-grid { grid-template-columns: 1fr; } }
+
+/* ---- picture tiles ----------------------------------------------------- */
+/* White, because that is the ground the photographs were shot on and the ones
+   that were not now carry their own transparency. The frame is a fixed shape
+   and the subject is trimmed to fill it, so a harmonic and a QDD beside it
+   read as the same size. */
+.type-art, .brand-art, .app-card .thumb, .pdp2-main { background: #fff; }

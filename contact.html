@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask an engineer — Omnii Robotics</title>
+<meta name="description" content="Send the torque, the envelope and the duty cycle. You get a shortlist across every supplier we carry, and the reasoning behind it.">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body data-page="contact">
+
+<div id="site-header"></div>
+
+<section class="page-head compact">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Store</a><span>/</span>Ask an engineer</div>
+    <h1>Tell us what the joint has to do</h1>
+    <p class="lede">Not which part you want — what it has to do. Torque, the space
+      it has to fit, and how hard it will be worked. You get back a shortlist
+      across every supplier we carry, with the reasoning, not a catalogue.</p>
+  </div>
+</section>
+
+<div class="wrap ask-layout">
+  <form data-ask novalidate>
+    <!-- Filled in when the visitor arrives from a product page, so they never
+         have to retype the model number they were just looking at. -->
+    <div class="asked-about" data-asked hidden></div>
+
+    <div class="form-grid">
+      <div><label class="lbl" for="a-name">Name</label>
+        <input class="field" id="a-name" name="name" autocomplete="name" required></div>
+      <div><label class="lbl" for="a-email">Work email</label>
+        <input class="field" id="a-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="full"><label class="lbl" for="a-org">Company or lab</label>
+        <input class="field" id="a-org" name="organisation" autocomplete="organization"></div>
+
+      <div><label class="lbl" for="a-torque">Torque you need</label>
+        <input class="field" id="a-torque" name="torque" placeholder="e.g. 20 N·m continuous, 60 peak"></div>
+      <div><label class="lbl" for="a-envelope">Space you have</label>
+        <input class="field" id="a-envelope" name="envelope" placeholder="e.g. Ø80 max, 40 mm deep"></div>
+
+      <div><label class="lbl" for="a-duty">Duty cycle</label>
+        <select class="field" id="a-duty" name="duty">
+          <option value="">Not sure yet</option>
+          <option>Intermittent — seconds at a time</option>
+          <option>Cyclic — a few minutes on, a few off</option>
+          <option>Continuous</option>
+          <option>Holding position most of the time</option>
+        </select></div>
+      <div><label class="lbl" for="a-qty">Quantity</label>
+        <select class="field" id="a-qty" name="quantity">
+          <option value="">Not sure yet</option>
+          <option>1 – 2, evaluating</option>
+          <option>3 – 9</option>
+          <option>10 – 39</option>
+          <option>40 or more</option>
+        </select></div>
+
+      <div class="full"><label class="lbl" for="a-msg">What are you building?</label>
+        <textarea class="field" id="a-msg" name="message" rows="5"
+          placeholder="The machine, the joint, and anything that rules a part in or out — backlash, hollow shaft for the harness, acoustic noise, ambient temperature."></textarea></div>
+    </div>
+
+    <!-- This form posts to the same Formspree inbox as the Picasso
+         Intelligence site. Without this the two are indistinguishable there. -->
+    <input type="hidden" name="site" value="omniirobotics.com">
+
+    <!-- Bots fill hidden fields; people do not. -->
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+           style="position:absolute;left:-9999px" aria-hidden="true">
+
+    <p style="margin-top:22px">
+      <button class="btn btn-accent" type="submit">Send to an engineer</button>
+    </p>
+    <p class="note muted" data-ask-note style="font-size:13px;margin-top:12px">
+      A person reads this. Expect a reply within one business day.</p>
+  </form>
+
+  <aside class="ask-side">
+    <h3>What you get back</h3>
+    <ol class="next-steps">
+      <li><strong>A shortlist, not a catalogue.</strong> Usually two or three parts
+        across different suppliers, with what each one costs you in weight, length
+        and backlash.</li>
+      <li><strong>The figures on one basis.</strong> Rated torque depends on bus
+        voltage and thermal limit, and suppliers do not publish it the same way. We
+        normalise before we compare.</li>
+      <li><strong>What we would not sell you.</strong> If the joint wants a harmonic
+        drive and we would be selling you a planetary one, we will say so.</li>
+    </ol>
+    <h3 style="margin-top:30px">If you already know the part</h3>
+    <p class="muted">Skip this and go straight to
+      <a href="select.html">the full table</a> — every model, every supplier, sorted
+      on whichever column matters.</p>
+  </aside>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

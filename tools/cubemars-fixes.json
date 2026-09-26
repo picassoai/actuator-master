@@ -1,0 +1,50 @@
+{
+ "_source": "CubeMars 产品画册.pdf pages 42, 43, 50, 51, 52. Transcribed 2026-09-06.",
+ "ri115-ph-kv40": {
+  "length": 38.1,
+  "od": 115,
+  "peak": 16.0,
+  "rpm": 1430,
+  "torque": 5.5,
+  "volts": 48,
+  "weight": 1108
+ },
+ "ri20-kv600": {
+  "length": 14.5,
+  "note": "Catalogue prints both torque figures in mN·m under an N·m heading.",
+  "od": 25,
+  "peak": 0.072,
+  "rpm": 7452,
+  "torque": 0.024,
+  "volts": 16,
+  "weight": 20
+ },
+ "ri30-kv260": {
+  "length": 14,
+  "note": "Catalogue prints both torque figures in mN·m under an N·m heading.",
+  "od": 38,
+  "peak": 0.23,
+  "rpm": 4110,
+  "torque": 0.076,
+  "volts": 24,
+  "weight": 40
+ },
+ "ri75-ph-kv70": {
+  "length": 31.8,
+  "od": 70,
+  "peak": 3.8,
+  "rpm": 2365,
+  "torque": 1.2,
+  "volts": 48,
+  "weight": 348
+ },
+ "ri85-ph-kv85": {
+  "length": 27.3,
+  "od": 85,
+  "peak": 5.0,
+  "rpm": 3042,
+  "torque": 2.0,
+  "volts": 48,
+  "weight": 411
+ }
+}
