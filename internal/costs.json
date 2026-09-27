@@ -1,201 +1,201 @@
 {
   "cm-ak10-9-v2-0-kv60": {
-    "dealer": 519.28
+    "dealer": 581.6
   },
   "cm-ak10-9-v3-0-kv60": {
-    "dealer": 519.28
-  },
-  "cm-ak40-10-kv170": {
-    "dealer": 64.94
+    "dealer": 581.6
   },
   "cm-ak40-10-kv170-with-driver": {
-    "dealer": 88.34
+    "dealer": 98.94
+  },
+  "cm-ak40-10-kv170-without-driver": {
+    "dealer": 72.73
   },
   "cm-ak40-10-v3-0-kv170": {
-    "dealer": 88.34
-  },
-  "cm-ak45-10-kv75": {
-    "dealer": 77.94
+    "dealer": 98.94
   },
   "cm-ak45-10-kv75-with-driver": {
-    "dealer": 101.34
+    "dealer": 113.5
+  },
+  "cm-ak45-10-kv75-without-driver": {
+    "dealer": 87.29
   },
   "cm-ak45-10-v3-0-kv75": {
-    "dealer": 101.34
+    "dealer": 113.5
   },
-  "cm-ak45-36-kv80": {
-    "dealer": 120.84
+  "cm-ak45-36-kv80-with-driver": {
+    "dealer": 135.34
   },
-  "cm-ak45-36-kv80-no-driver": {
-    "dealer": 97.44
+  "cm-ak45-36-kv80-without-driver": {
+    "dealer": 109.13
   },
   "cm-ak45-36-v3-0-kv80": {
-    "dealer": 120.84
+    "dealer": 135.34
   },
   "cm-ak60-39-v3-0": {
-    "dealer": 291.78
+    "dealer": 326.8
   },
   "cm-ak60-6-v1-1-kv140": {
-    "dealer": 194.28
+    "dealer": 217.6
   },
   "cm-ak60-6-v3-0-kv80": {
-    "dealer": 194.28
-  },
-  "cm-ak70-10-kv100": {
-    "dealer": 259.28
+    "dealer": 217.6
   },
   "cm-ak70-10-kv100-with-driver": {
-    "dealer": 324.28
+    "dealer": 363.2
   },
-  "cm-ak70-9-kv60": {
-    "dealer": 324.28
+  "cm-ak70-10-kv100-without-driver": {
+    "dealer": 290.4
   },
-  "cm-ak70-9-v3-0-kv60": {
-    "dealer": 259.28
+  "cm-ak70-9-v3-0-kv60-with-driver": {
+    "dealer": 363.2
+  },
+  "cm-ak70-9-v3-0-kv60-without-driver": {
+    "dealer": 290.4
   },
   "cm-ak80-64-kv80": {
-    "dealer": 643.44
-  },
-  "cm-ak80-8-kv60": {
-    "dealer": 305.44
+    "dealer": 720.65
   },
   "cm-ak80-8-kv60-with-driver": {
-    "dealer": 370.44
+    "dealer": 414.89
   },
-  "cm-ak80-9-v3-0-kv100": {
-    "dealer": 311.94
+  "cm-ak80-8-kv60-without-driver": {
+    "dealer": 342.09
   },
   "cm-ak80-9-v3-0-kv100-with-driver": {
-    "dealer": 376.94
+    "dealer": 422.17
+  },
+  "cm-ak80-9-v3-0-kv100-without-driver": {
+    "dealer": 349.37
   },
   "cm-aka10-9-kv60": {
-    "dealer": 519.28
+    "dealer": 581.6
   },
   "cm-aka60-6-kv80": {
-    "dealer": 194.28
+    "dealer": 217.6
   },
   "cm-ake60-8-kv80": {
-    "dealer": 142.28
+    "dealer": 159.36
   },
   "cm-ake80-8-kv30": {
-    "dealer": 220.94
+    "dealer": 247.45
   },
   "cm-ake90-8-kv35": {
-    "dealer": 314.53
+    "dealer": 352.28
   },
   "cm-akh70-16-v1-0-kv41": {
-    "dealer": 388.7
+    "dealer": 435.34
   },
   "cm-akh70-48-v1-0-kv41": {
-    "dealer": 453.7
+    "dealer": 508.14
   },
   "cm-gl100-kv10": {
-    "dealer": 177.44
+    "dealer": 198.74
   },
-  "cm-gl30-kv290": {
-    "dealer": 33.14
+  "cm-gl30-kv290-with-encoder": {
+    "dealer": 55.32
   },
-  "cm-gl30-kv290-with-driver": {
-    "dealer": 49.39
+  "cm-gl30-kv290-without-encoder": {
+    "dealer": 37.12
   },
-  "cm-gl35-kv100": {
-    "dealer": 35.74
+  "cm-gl35-kv100-with-encoder": {
+    "dealer": 58.23
   },
-  "cm-gl35-kv100-with-driver": {
-    "dealer": 51.99
+  "cm-gl35-kv100-without-encoder": {
+    "dealer": 40.03
   },
-  "cm-gl40-kv70": {
-    "dealer": 47.44
+  "cm-gl40-kv70-with-encoder": {
+    "dealer": 71.34
   },
-  "cm-gl40-kv70-with-driver": {
-    "dealer": 63.69
+  "cm-gl40-kv70-without-encoder": {
+    "dealer": 53.14
   },
   "cm-gl40-kv82-5": {
-    "dealer": 87.09
+    "dealer": 97.55
   },
-  "cm-gl60-kv25": {
-    "dealer": 70.84
+  "cm-gl60-kv25-with-encoder": {
+    "dealer": 97.55
   },
-  "cm-gl60-kv25-with-driver": {
-    "dealer": 87.09
+  "cm-gl60-kv25-without-encoder": {
+    "dealer": 79.35
   },
   "cm-gl60-kv28": {
-    "dealer": 108.54
+    "dealer": 121.57
   },
   "cm-gl80-kv30": {
-    "dealer": 118.29
+    "dealer": 132.49
   },
   "cm-gl80-kv60": {
-    "dealer": 118.29
-  },
-  "cm-ri100-kv105": {
-    "dealer": 96.79
+    "dealer": 132.49
   },
   "cm-ri100-kv105-with-hall": {
-    "dealer": 106.54
+    "dealer": 119.32
+  },
+  "cm-ri100-kv105-without-hall": {
+    "dealer": 108.4
   },
   "cm-ri115-ph-kv40": {
-    "dealer": 129.94
+    "dealer": 145.53
   },
   "cm-ri20-kv600": {
-    "dealer": 27.89
+    "dealer": 31.23
   },
   "cm-ri30-kv260": {
-    "dealer": 33.73
-  },
-  "cm-ri50-kv100": {
-    "dealer": 40.23
+    "dealer": 37.78
   },
   "cm-ri50-kv100-with-hall": {
-    "dealer": 49.99
+    "dealer": 55.98
   },
-  "cm-ri60-kv120": {
-    "dealer": 64.29
+  "cm-ri50-kv100-without-hall": {
+    "dealer": 45.06
   },
   "cm-ri60-kv120-with-hall": {
-    "dealer": 74.04
+    "dealer": 82.92
   },
-  "cm-ri70-kv95": {
-    "dealer": 80.54
+  "cm-ri60-kv120-without-hall": {
+    "dealer": 72.0
   },
   "cm-ri70-kv95-with-hall": {
-    "dealer": 90.29
+    "dealer": 101.12
+  },
+  "cm-ri70-kv95-without-hall": {
+    "dealer": 90.2
   },
   "cm-ri75-ph-kv70": {
-    "dealer": 90.29
-  },
-  "cm-ri80-v2-0-kv75": {
-    "dealer": 86.39
+    "dealer": 101.12
   },
   "cm-ri80-v2-0-kv75-with-hall": {
-    "dealer": 96.14
+    "dealer": 107.67
+  },
+  "cm-ri80-v2-0-kv75-without-hall": {
+    "dealer": 96.75
   },
   "cm-ri85-ph-kv85": {
-    "dealer": 96.14
+    "dealer": 107.67
   },
-  "cm-ro100-kv55": {
-    "dealer": 101.99
+  "cm-ro100-kv55-lite": {
+    "dealer": 114.22
   },
   "cm-ro100-kv55-standard": {
-    "dealer": 111.74
+    "dealer": 125.14
   },
   "cm-ro40-kv140-lite": {
-    "dealer": 33.73
+    "dealer": 37.78
   },
   "cm-ro50-kv108-lite": {
-    "dealer": 42.84
+    "dealer": 47.98
   },
-  "cm-ro60-kv115": {
-    "dealer": 50.64
+  "cm-ro60-kv115-lite": {
+    "dealer": 56.71
   },
   "cm-ro60-kv115-standard": {
-    "dealer": 55.84
+    "dealer": 62.54
   },
-  "cm-ro80-kv105": {
-    "dealer": 68.19
+  "cm-ro80-kv105-lite": {
+    "dealer": 76.37
   },
   "cm-ro80-kv105-standard": {
-    "dealer": 74.69
+    "dealer": 83.65
   },
   "ma-rh-14": {
     "dealer": 519.35

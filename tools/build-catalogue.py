@@ -90,7 +90,7 @@ if os.path.isdir(SWDIR):
 
 
 def gallery(cm_id):
-    for cand in (cm_id, re.sub(r"-(with-hall|with-driver|standard|lite|no-driver)$", "", cm_id)):
+    for cand in (cm_id, re.sub(r"-(with-hall|without-hall|with-driver|without-driver|with-encoder|without-encoder|standard|lite|no-driver)$", "", cm_id)):
         shots = ["assets/img/products/%s-%d.jpg" % (cand, n)
                  for n in (1, 2, 3) if ("%s-%d.jpg" % (cand, n)) in HAVE]
         if shots:
@@ -99,9 +99,12 @@ def gallery(cm_id):
 
 
 def photo(cm_id):
-    """CubeMars photos are named after the part. Variants share the base part's
-    shot, so a `-with-hall` or `-standard` suffix falls back to its parent."""
-    for cand in (cm_id, re.sub(r"-(with-hall|with-driver|standard|lite|no-driver)$", "", cm_id)):
+    """CubeMars photos are named after the part, not the variant, so a variant
+    falls back to its parent's shot. The suffix list has to track the
+    storefront's ids: it renamed -no-driver to -without-driver and the GL
+    parts' driver to an encoder, and 20 products lost their photographs until
+    those spellings were added here."""
+    for cand in (cm_id, re.sub(r"-(with-hall|without-hall|with-driver|without-driver|with-encoder|without-encoder|standard|lite|no-driver)$", "", cm_id)):
         for n in (1, 2, 3):
             f = "%s-%d.jpg" % (cand, n)
             if f in HAVE:
